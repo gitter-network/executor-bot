@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<io.neow3j.version>3.16.0</io.neow3j.version>
+		<lombok.version>1.18.24</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,9 +31,21 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>io.neow3j</groupId>
 			<artifactId>contract</artifactId>
 			<version>${io.neow3j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

@@ -1,0 +1,7 @@
+logging:
+    level:
+        root:
+neo.n3:
+    node-url:
+    gitter-core-script-hash:
+    wif:
