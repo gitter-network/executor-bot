@@ -37,6 +37,7 @@ public class GitterCoreService {
         try {
             this.neow3j.subscribeToNewBlocksObservable(false)
                     .subscribe(v -> {
+                        log.info("new block...fetching jobs");
                         fetchJobs().stream().forEach(job -> {
                             try {
                                 fetchJob(job);
@@ -53,6 +54,7 @@ public class GitterCoreService {
         }
     }
     private void executeJob(byte[] job) {
+        log.info("executing job: {}", job);
         try {
             new SmartContract(gitterCoreScriptHash, neow3j)
                     .invokeFunction("executeJob", ContractParameter.byteArray(job), ContractParameter.hash160(account))
