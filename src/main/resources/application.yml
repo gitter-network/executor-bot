@@ -5,4 +5,4 @@ logging:
 neo.n3:
     node-url: https://neo3-testnet.neoline.vip:443
     gitter-core-script-hash: "0xb67c208b0a66abdbe4c18088a927890aac6fa084"
-    wif:
+    wif: YOUR_EXECUTOR-WIF
